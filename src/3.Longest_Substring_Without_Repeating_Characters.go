@@ -19,11 +19,11 @@ func lengthOfLongestSubstring(s string) int {
 
 		if exist && start <= num {
 			start = num + 1
-		} else{
-			if longest > (i+1-start) {
+		} else {
+			if longest > (i + 1 - start) {
 				longest = longest
-			}else {
-				longest = i+1-start
+			} else {
+				longest = i + 1 - start
 			}
 		}
 
