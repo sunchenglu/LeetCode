@@ -1,6 +1,6 @@
-package src
+package algorithm
 
-func twoSum(nums []int, target int) []int {
+func TwoSum(nums []int, target int) []int {
 	num := len(nums)
 	for i := 0; i < num; i++ {
 		for j := i + 1; j < num; j++ {

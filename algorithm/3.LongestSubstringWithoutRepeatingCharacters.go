@@ -1,6 +1,6 @@
-package src
+package algorithm
 
-func lengthOfLongestSubstring(s string) int {
+func LengthOfLongestSubstring(s string) int {
 
 	length := len(s)
 

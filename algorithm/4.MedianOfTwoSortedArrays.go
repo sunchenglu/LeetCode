@@ -1,7 +1,7 @@
-package src
+package algorithm
 
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 
 	m, n := len(nums1), len(nums2)
 

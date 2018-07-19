@@ -1,7 +1,7 @@
-package src
+package algorithm
 
 
-func longestPalindrome(s string) string {
+func LongestPalindrome(s string) string {
 
 	if len(s) == 0 {
 		return ""

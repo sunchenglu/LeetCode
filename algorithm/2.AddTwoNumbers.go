@@ -1,6 +1,11 @@
-package src
+package algorithm
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	add := 0
 	var head *ListNode
