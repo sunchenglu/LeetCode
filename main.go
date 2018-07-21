@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	s := "abc"
-
-	convert_s := algorithm.ZigZagConvert(s, 2)
-	fmt.Println(convert_s);
+	x := []int{1,2,3,4,5}
+	res := algorithm.MaxArea(x)
+	fmt.Println(res);
 }
