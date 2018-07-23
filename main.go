@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	x := []int{1,2,3,4,5}
-	res := algorithm.MaxArea(x)
+	x := "MCMXCIV"
+	res := algorithm.RomanToInt(x)
 	fmt.Println(res);
 }

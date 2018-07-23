@@ -12,10 +12,10 @@ func LongestPalindrome(s string) string {
 	}
 
 	start := 0
-	max_len := 1
+	maxLen := 1
 
 	for i := 0; i < len(s); i++ {
-		if len(s)-i <= max_len/2 {
+		if len(s)-i <= maxLen/2 {
 			break
 		}
 		j := i
@@ -32,12 +32,12 @@ func LongestPalindrome(s string) string {
 
 		len_ := k - j + 1
 
-		if len_ > max_len {
+		if len_ > maxLen {
 			start = j
-			max_len = len_
+			maxLen = len_
 		}
 
 	}
 
-	return s[start: max_len+start]
+	return s[start: maxLen+start]
 }

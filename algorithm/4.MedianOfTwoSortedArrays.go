@@ -13,50 +13,50 @@ func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		return 0.0
 	}
 
-	imin, imax, half_len := 0, m, (m+n+1)/2
-	max_of_left := 0
-	min_of_right := 0
+	iMin, iMax, halfLen := 0, m, (m+n+1)/2
+	maxOfLeft := 0
+	minOfRight := 0
 
-	for imin <= imax {
+	for iMin <= iMax {
 
-		i := (imin + imax) / 2
-		j := half_len - i
+		i := (iMin + iMax) / 2
+		j := halfLen - i
 
 		if i < m && nums2[j-1] > nums1[i] {
-			imin = i + 1
+			iMin = i + 1
 		} else if i > 0 && nums1[i-1] > nums2[j] {
-			imax = i - 1
+			iMax = i - 1
 		} else {
 
 			if i == 0 {
-				max_of_left = nums2[j-1]
+				maxOfLeft = nums2[j-1]
 			} else if j == 0 {
-				max_of_left = nums1[i-1]
+				maxOfLeft = nums1[i-1]
 			} else {
 				if nums1[i-1] > nums2[j-1] {
-					max_of_left = nums1[i-1]
+					maxOfLeft = nums1[i-1]
 				}else {
-					max_of_left =  nums2[j-1]
+					maxOfLeft =  nums2[j-1]
 				}
 			}
 
 			if (m + n) % 2 == 1 {
-				return float64(max_of_left)
+				return float64(maxOfLeft)
 			}
 
 			if i == m {
-				min_of_right = nums2[j]
+				minOfRight = nums2[j]
 			}else if j == n {
-				min_of_right = nums1[i]
+				minOfRight = nums1[i]
 			}else {
 				if nums1[i] <= nums2[j] {
-					min_of_right = nums1[i]
+					minOfRight = nums1[i]
 				}else {
-					min_of_right = nums2[j]
+					minOfRight = nums2[j]
 				}
 			}
 
-			return float64(max_of_left + min_of_right)/2
+			return float64(maxOfLeft + minOfRight)/2
 
 		}
 	}
