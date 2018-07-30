@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	x := "23456"
-	res := algorithm.LetterCombinations(x)
+	x := []int{-3,-1,0,2,4,5}
+	res := algorithm.FourSum(x, 0)
 	fmt.Println(res)
 }
