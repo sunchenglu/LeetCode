@@ -1,12 +1,17 @@
 package main
 
 import (
-	"fmt"
 	"./algorithm"
+	"fmt"
 )
 
 func main() {
-	x := []int{-3,-1,0,2,4,5}
-	res := algorithm.FourSum(x, 0)
+
+	x := &algorithm.ListNode{
+		Val:1,
+		Next:nil,
+	}
+
+	res := algorithm.RemoveNthFromEnd(x, 1)
 	fmt.Println(res)
 }
