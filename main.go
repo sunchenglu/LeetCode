@@ -7,7 +7,9 @@ import (
 
 func main() {
 
-	res := algorithm.StrStr("mississippi","pi")
+	nums := []int{1}
+
+	res := algorithm.SearchRange(nums, 1)
 
 	fmt.Println(res)
 
