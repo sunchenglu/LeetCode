@@ -3,6 +3,11 @@ package algorithm
 func PreorderTraversal(root *TreeNode) []int {
 
 	ret := make([]int, 0)
+
+	if root == nil {
+		return ret
+	}
+
 	stack := []*TreeNode{root}
 
 	for len(stack) != 0 {
