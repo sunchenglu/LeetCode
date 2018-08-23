@@ -3,24 +3,20 @@ package algorithm
 func PostorderTraversal(root *TreeNode) []int {
 
 	ret := make([]int, 0)
+	stack := make([]*TreeNode, 0)
 
-	if root == nil {
-		return ret
-	}
+	p := root
 
-	stack := []*TreeNode{root}
+	for p != nil || len(stack) != 0 {
 
-	for len(stack) != 0 {
-		p := stack[len(stack)-1]
-		stack = stack[0: len(stack) -1]
-		ret = append(ret, p.Val)
-
-		if p.Left != nil {
-			stack = append(stack, p.Left)
-		}
-
-		if p.Right != nil {
-			stack = append(stack, p.Right)
+		if p != nil {
+			stack = append(stack, p)
+			ret = append(ret, p.Val)
+			p = p.Right
+		} else {
+			p = stack[len(stack)-1]
+			stack = stack[0:len(stack)-1]
+			p = p.Left
 		}
 	}
 
