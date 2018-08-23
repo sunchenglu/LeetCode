@@ -1,6 +1,7 @@
 package algorithm
 
 func InorderTraversal(root *TreeNode) []int {
+
 	ret := make([]int, 0)
 	stack := make([]*TreeNode, 0)
 
@@ -14,7 +15,7 @@ func InorderTraversal(root *TreeNode) []int {
 			p = p.Left
 		} else {
 			p = stack[len(stack)-1]
-			stack = stack[0:len(stack)-1]
+			stack = stack[0 : len(stack)-1]
 			p = p.Right
 		}
 	}
