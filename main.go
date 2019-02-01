@@ -7,10 +7,7 @@ import (
 
 func main() {
 
-	nums := []int{1}
-
-	res := algorithm.SearchRange(nums, 1)
-
+	res := algorithm.CountAndSay(10)
 	fmt.Println(res)
 
 }
